@@ -1,0 +1,12 @@
+body.bg-dark {
+    background-color: #1a1a1a !important;
+}
+body.bg-dark, body.bg-dark .text-light {
+    color: #f8f9fa !important;
+}
+.card {
+    border-radius: 1.2rem;
+}
+.table th, .table td {
+    vertical-align: middle !important;
+}
