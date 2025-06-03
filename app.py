@@ -122,8 +122,10 @@ def delete_transaction(tid):
 
 @app.route("/undo_delete")
 def undo_delete():
-    if "user_id" not in session or "undo_tid" not in session:
+    if "user_id" not in session:
         return redirect("/login")
+    if "undo_tid" not in session:
+        return redirect("/budget")
     tid = session.pop("undo_tid", None)
     if tid:
         db.execute("UPDATE transactions SET deleted = 0 WHERE id = ?", tid)
