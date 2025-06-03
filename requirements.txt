@@ -4,3 +4,5 @@ Flask-Session
 werkzeug
 gunicorn
 bcrypt
+pytest
+pytest-flask
